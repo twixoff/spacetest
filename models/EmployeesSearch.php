@@ -70,7 +70,6 @@ class EmployeesSearch extends Employees
         $query->andFilterWhere([
             'id' => $this->id,
             'inPlace' => $this->inPlace,
-            'groups.id' => $this->groups->id,
         ]);
 
         $query->andFilterWhere(['IN', 'groups.id', $this->groups]);
