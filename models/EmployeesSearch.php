@@ -78,6 +78,8 @@ class EmployeesSearch extends Employees
         
         $query->andFilterWhere(['like', 'employees.name', $this->name]);
 
+        $query->groupBy(['employees.id']);
+        
         return $dataProvider;
     }
 }
